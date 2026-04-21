@@ -55,3 +55,7 @@ button:hover {
     font-size: 18px;
     color: gray;
 }
+#icon {
+    width: 80px;
+    height: 80px;
+}
