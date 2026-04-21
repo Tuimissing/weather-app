@@ -1,6 +1,6 @@
 const apiKey = "47f9b9125dd9a353b11772ac2a56e2fb";
 
-// 📍 AUTO DETECT LOCATION ON LOAD
+// AUTO DETECT LOCATION
 window.onload = () => {
     navigator.geolocation.getCurrentPosition(success, error);
 };
@@ -16,7 +16,7 @@ function error() {
     document.getElementById("condition").innerText = "Location denied ❌";
 }
 
-// 🌍 FETCH USING COORDINATES
+// FETCH USING COORDINATES
 function getWeatherByCoords(lat, lon) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
@@ -28,7 +28,7 @@ function getWeatherByCoords(lat, lon) {
         });
 }
 
-// 🔍 SEARCH BY CITY
+// SEARCH BY CITY
 function searchWeather() {
     const city = document.getElementById("searchBox").value;
 
@@ -53,7 +53,7 @@ function searchWeather() {
         });
 }
 
-// 🎨 UPDATE UI + ICON
+//ICON
 function updateUI(data) {
     document.getElementById("city").innerText = data.name;
     document.getElementById("temp").innerText = Math.round(data.main.temp) + "°C";
@@ -65,7 +65,7 @@ function updateUI(data) {
     document.getElementById("icon").src = iconUrl;
 }
 
-// ⌨️ ENTER KEY SUPPORT
+// ENTER KEY 
 document.getElementById("searchBox").addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
         searchWeather();
