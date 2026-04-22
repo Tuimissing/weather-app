@@ -1,4 +1,4 @@
-const apiKey = "47f9b9125dd9a353b11772ac2a56e2fb";
+const apiKey = "Place here you api key";
 
 // AUTO DETECT LOCATION
 window.onload = () => {
